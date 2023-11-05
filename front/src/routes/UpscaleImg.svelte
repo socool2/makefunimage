@@ -1,6 +1,3 @@
-<head>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-</head>
 <script>
     import imageIcon from "../lib/image-file-svgrepo-com.svg";
 
@@ -21,7 +18,7 @@
     }
 
     const handleFileChange = async (e) => {
-        if(check_recaptcha()){
+        if (check_recaptcha() === true) {
             const imgFormData = new FormData();
             imgFormData.append("file",file);
             imgFormData.append("scale",scale)
