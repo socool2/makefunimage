@@ -36,7 +36,7 @@
             let data = await response.json()
             resultFilename = data['result']
 
-            if (response.ok){
+            if (response.ok && resultFilename!=='fail'){
                 let resultDiv = document.getElementById('result')
                 resultDiv.removeAttribute('style')
 
